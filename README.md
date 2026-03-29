@@ -69,15 +69,14 @@ An impartial AI evaluates the full transcript, declares a winner based on logica
 
 * **Frontend:** NextJS, Tailwind CSS) & Framer Motion
 * **Backend:** Python, FastAPI
-* **AI/Inference:** Ollama (Running local Llama 3)
+* **AI/Inference:** Ollama API
 * **Audio:** Web Speech API / `gTTS`
 
 ## 🚀 Local Setup & Installation
 
 ### 1. Prerequisites
 * Python 3.10+
-* [Ollama](https://ollama.com/) installed on your machine.
-* At least 8GB of RAM (A dedicated GPU is recommended for faster token generation).
+* [Ollama](https://ollama.com/) API.
 
 ### 2. Start the AI Engine
 Open a terminal and pull your preferred model. Leave this running in the background to keep the model warm in VRAM.
