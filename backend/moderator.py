@@ -2,7 +2,7 @@ import json
 import os
 import asyncio
 from typing import List, Dict
-from ai_engine import query_model
+from ai_engine import query_model, generate_rebuttal
 
 active_sessions  = {}
 LEADERBOARD_FILE = "leaderboard.json"
@@ -117,7 +117,7 @@ async def generate_next_turn(session_id: str):
         messages = session.get_llm_messages(stance)
 
         loop     = asyncio.get_event_loop()
-        response = await loop.run_in_executor(None, query_ollama, messages)
+        response = await loop.run_in_executor(None, query_model, messages)
 
         session.add_message(stance, response)
         session.current_turn = "Con" if stance == "Pro" else "Pro"
